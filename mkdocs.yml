@@ -1,3 +1,26 @@
 site_name: COMP423 Course Notes
 theme:
   name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.extra
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - awesome-pages
+  - macros
+  - exclude:
+      glob:
+        - "README.md"
+        - "*.tmp"

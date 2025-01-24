@@ -1,24 +1,22 @@
 # Setting up a dev container for Go
 
 By the end of this walkthrough, you should be able to:  
-- Install Go on your computer  
+- Set up a dev container for Go  
 - Create a Go program  
 - Use a `go.mod` file to manage dependencies  
 - Print "Hello, World!" to the terminal  
 - Run your program  
 
 ## Preparing your workspace
-Navigate to the [Go instillation site](https://go.dev/dl/) and download the correct file based on your device specifications. 
+Set up a dev container to manage your Go development environment. This avoids installing Go or other tools directly on your host machine.
 
-!!! note
-    Ensure you have the latest version of Go installed by running `$ go version`.
+Next, create a *.devcontainer* directory for your project:
+```bash
+$ mkdir hello
+$ cd hello
+```  
 
-Create a directory to host your program. Navigate to your desired location and run:  
-`$ mkdir hello`  
-`$ cd hello`  
-
-## Manage dependcies
-Create a directory to maintain your Dev Controller:
+Next, create a *.devcontainer* directory to configure your development environment:
 `$ mkdir devcontainer`  
 `$ touch .devcontainer/devcontainer.json`  
 Inside *devcontainer.json*, insert the following:  
@@ -32,10 +30,18 @@ Inside *devcontainer.json*, insert the following:
     }
   }
 }
-```
-Next, create a mod file to track and manage dependcies:
+```  
+!!! Warning
+    Ensure you open your project in VSCode and select Reopen in Container when prompted. This step builds and launches the dev container.  
+
+## Verifying your setup
+Once your dev container is up and running, verify that Go is installed by opening a terminal inside the container and running:  
+```$ go version```
+
+## Managing dependencies
+Initalize your Go project by running the following command inside your project directory:  
 `$ go mod init example/hello`  
-Open VSCode and navigate to the *hello* directory. Under **Extensions**, locate and install the official Go VSCode Plugin.
+This creates a go.mod file to track and manage your project dependencies. Open your project in VSCode and ensure the Go VSCode plugin is installed under the Extensions tab.  
 
 ## Creating your first Go program  
 Create a new file named `hello.go`. Inside *hello.go*, add the following code:  
@@ -64,7 +70,7 @@ To build your program you can use the following subcommand:
 This command generates a binary executable in the same directory named `hello` which contains the compuled, executable code that your machine can run without having to recompile. To run the executable, use the command:  
 `./hello`
 
-## Understanding the `build` subcommand
+## Understanding the build subcommand
 The `go build` command creates a binary executable that you can run directly. This is similar to using `gcc` in COMP211 to compile a C program into an executable.
 
 **Example (C Program in COMP211):**
