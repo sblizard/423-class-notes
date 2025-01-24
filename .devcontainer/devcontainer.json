@@ -1,11 +1,17 @@
 {
-    "name": "COMP423 Course Notes",
-    "image": "mcr.microsoft.com/devcontainers/python:latest",
-    "customizations": {
-      "vscode": {
-        "settings": {},
-        "extensions": ["ms-python.python"]
-      }
-    },
-    "postCreateCommand": "pip install -r requirements.txt"
-  }
+  "name": "COMP423 Course Notes",
+  "image": "mcr.microsoft.com/devcontainers/python:latest",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-preview-github-styles"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-macros-plugin mkdocs-exclude pymdown-extensions"
+}
