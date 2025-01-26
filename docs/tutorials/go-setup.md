@@ -58,6 +58,10 @@ func main() {
 ```
 This code creates a main package, imports [fmt](https://pkg.go.dev/fmt/) which contains functions retaining to formatting text, including printint it in terminal, and the main function.  
 
+## Create your mod file
+Create a `.mod` in order to track and manage your dependcies. Create it by running the following command:
+```go mod init hello```
+
 ## Running your program  
 In order to run you program use the following command:  
 `$ go run .`  
