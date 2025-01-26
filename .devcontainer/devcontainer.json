@@ -13,5 +13,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip install mkdocs-material mkdocs-awesome-pages-plugin mkdocs-macros-plugin mkdocs-exclude pymdown-extensions"
+  "postCreateCommand": "pip install -r requirements.txt"
 }
