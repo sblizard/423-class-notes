@@ -49,7 +49,7 @@ git commit -m "Initial commit with README"
 
 (2) Fill in the details as follows:
 
-* **Repository Name**: `<website-name-of-your-choosing>`
+* **Repository Name**: `comp423-ex00`
 * **Description**: "Website using Rust for COMP 423"
 * **Visibility**: Public
 
