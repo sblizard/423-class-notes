@@ -1,4 +1,4 @@
-# Setting up a dev container for Go
+# Setting Up a Dev Container for Go
 
 By the end of this walkthrough, you should be able to:  
 - Set up a dev container for Go  
@@ -75,12 +75,12 @@ This command generates a binary executable in the same directory named `hello` w
 `./hello`
 
 ## Understanding the build subcommand
-The `go build` command creates a binary executable that you can run directly. This is similar to using `gcc` in COMP211 to compile a C program into an executable.
+The `go build` command creates a binary executable file that you can run directly. This is similar to using `gcc` in COMP211 to compile a C program into an executable.
 
 **Example (C Program in COMP211):**
-```bash
+`bash
 gcc -o hello hello.c
-./hello
+./hello`
 
 * Primary author: [Sean Blizard](https://github.com/sblizard)
 * Reviewer: [Grace Odondi](https://github.com/godondi)
